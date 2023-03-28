@@ -15,7 +15,7 @@ const Watchlist = () => {
           <h1 className="heading"> My Saved Movies </h1>
 
           <span className="count-pill"> 
-          {watchlist.length} {watchlist.length===1 ? "Movie" : "Movies"}
+          {watchlist.length} {watchlist.length<=1 ? "Movie" : "Movies"}
           </span>
         </div>
         
