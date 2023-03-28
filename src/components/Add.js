@@ -21,6 +21,7 @@ const Add = () => {
       if(!data.errors){
         setResults(data.results);
       }else{
+        console.log("error");
         setResults([]);
       }
     });
