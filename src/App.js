@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import { Routes, Route} from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Watchlist from './components/Watchlist';
+import Watched from './components/Watched';
+import Add from './components/Add.js'
+
+import './lib/font-awesome/css/all.min.css'
+
+const App =() =>  {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+   
+
+    <Routes>
+      <Route path='/' element={ <Navigation /> } >
+
+      
+        <Route index element={<Watchlist />} /> 
+        <Route path="watched" element={<Watched />} /> 
+        <Route path="add" element={<Add/>} /> 
+
+      </Route>
+    </Routes>
+  )
 }
 
 export default App;
